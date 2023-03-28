@@ -17,10 +17,13 @@ Plusieurs méthodes :
 ## Uses cases à intégrer dans le projet doctoliberal
 
 Alors, je n'ai pas fais le cas de doctoliberal, mais pour l'application de barkeeper's assistant :
+
 En ce qui concerne la génération de manifest, elle aurait pu être faite avec workbox.
 
 On pourrait utiliser le staleWhileRevalidate pour tout le rapport de la table : si c'est la même personne qui a prit les commandes avant, la device aura en cache les infos initiales, donc l'historique ne devrait pas changer et l'affichage sera plus rapide.
+
 Pour ce qui concerne le menu, on serait en cacheFirst, car les plat et les prix ne sont pas censer changer dans la soirée, il suffit de mettre un temps de rafraichissement de 1 heures et on devrait être bon.
+
 Pour le payment en revanche, il sera obligatoire d'être en networkFirst car on ne veut pas commencer à donner un mauvais prix au client.
 
  
@@ -30,10 +33,10 @@ Pour le payment en revanche, il sera obligatoire d'être en networkFirst car on 
 
 Alors, je vais simplement partir du principe que ce que j'ai fait pour le projet peut être copier coller :
 
-```TypeScript
+```javaSCRIPT
 'use client';
 import Link from "next/link";
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Pwa() {
   return (
@@ -70,10 +73,12 @@ export default function Pwa() {
   )
 }
 ```
-les classes sont issues de Tailwind, je mettrais l'image dans le repo git
+Les classes css sont issues de Tailwind, je mettrais l'image dans le repo git
 
 
 ## 2 ) Expliquer en quoi il serait interessant de mettre en place une telle page
 
-L'interet de mettre cette page est de permettres d'informer les utilisateurs de la possibilité d'obtenir l'application de leur site, cela aura plusieurs effets : Les utilisateurs seront plus apte a télécharger l'application, ce qui induit que les fonctionnalitées que l'on a apportés à la PWA seront utilisées, et rendra leur experience plus aggréable. De plus une fois la PWA téléchargée, il est plus tentant d'aller sur l'application que de repasser par un navigateur (plus facile d'acces, pas besoin de retapper l'adresse / rechercher le site sur internet)
+L'interet de mettre cette page est de permettres d'informer les utilisateurs de la possibilité d'obtenir l'application de leur site, cela aura plusieurs effets : Les utilisateurs seront plus apte a télécharger l'application, ce qui induit que les fonctionnalitées que l'on a apportés à la PWA seront utilisées, et rendra leur experience plus aggréable. 
+
+De plus une fois la PWA téléchargée, il est plus tentant d'aller sur l'application que de repasser par un navigateur (plus facile d'acces, pas besoin de retapper l'adresse / rechercher le site sur internet)
 
