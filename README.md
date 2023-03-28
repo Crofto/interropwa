@@ -20,7 +20,7 @@ Alors, je n'ai pas fais le cas de doctoliberal, mais pour l'application de barke
 En ce qui concerne la génération de manifest, elle aurait pu être faite avec workbox.
 
 On pourrait utiliser le staleWhileRevalidate pour tout le rapport de la table : si c'est la même personne qui a prit les commandes avant, la device aura en cache les infos initiales, donc l'historique ne devrait pas changer et l'affichage sera plus rapide.
-pour ce qui concerne le menu, on serait en cacheFirst, car les plat et les prix ne sont pas censer changer dans la soirée, il suffit de mettre un temps de rafraichissement de 1 heures et on devrait être bon.
+Pour ce qui concerne le menu, on serait en cacheFirst, car les plat et les prix ne sont pas censer changer dans la soirée, il suffit de mettre un temps de rafraichissement de 1 heures et on devrait être bon.
 Pour le payment en revanche, il sera obligatoire d'être en networkFirst car on ne veut pas commencer à donner un mauvais prix au client.
 
  
